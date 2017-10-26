@@ -10,6 +10,8 @@ class MainPageLocators(object):
 
 class PopularPageLocators(object):
     POST_BUTTON = (By.XPATH, '//a/span[text()=\'Post\']')
+    AVATAR_DROPDOWN = (By.ID, 'dropdownMenu2')
+    MANAGE_POSTS_ITEM = (By.XPATH, './/li/a[text()=\'Manage Posts\']')
 
 class CreateNewPostLocators(object):
     TITLE_FIELD = (By.ID, 'id_title')
@@ -19,3 +21,9 @@ class CreateNewPostLocators(object):
     ADD_TAGS_FIELD = (By.XPATH, './/input[@class=\'select2-search__field\']')
     PUBLISH_BUTTON = (By.ID, 'publish-btn')
 
+class ManagePostsLocators(object):
+    POSTS_ARRAY = (By.XPATH, './/*[@class="post-title"]//a')
+    DELETE_BUTTON = (By.ID, 'delete-post-btn')
+    CHECKBOXES_ARRAY = (By.XPATH, ".//label[@class='simple']")
+    EDIT_BUTTONS_ARRAY = (By.XPATH, './/a[@class=\'btn btn-default red\']')
+    YES_CONFIRMING_DELETING_BUTTON = (By.XPATH, './/a[@class=\'btn btn-dark post-delete-btn xs-btn\']')
